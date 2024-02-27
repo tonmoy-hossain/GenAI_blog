@@ -555,3 +555,65 @@ Under the hood of Encoder-Decoder family architectures. The encoder is responsib
 To create the new family of Llama 2 models, the authors used an optimized auto-regressive transformer but made several changes to improve performance.
 
 Specifically, they performed more robust data cleaning, updated data mixes, trained on 40% more total tokens, doubled the context length, and used grouped-query attention (GQA) to improve inference scalability for larger models.
+
+#### E.2 &nbsp; &nbsp;  Training Details
+1. Adopt most of the pretraining setting and model architecture from Llama 1:
+	+ use the standard transformer architecture
+	+ apply pre-normalization using RMSNorm
+	+ use the SwiGLU activation function
+	+ use rotary positional embeddings (RoPE)
+2. Primary architectural differences:
+	+ increased context length
+	+ grouped-query attention (GQA)
+
+#### E.3 &nbsp; &nbsp;  Llama 2: Rotary Positional Embeddings (RoPE)
+
+An enhancement to the traditional position encoding used in transformer models. RoPE dynamically encodes the position information by rotating the query and key vectors in the attention mechanism.
+
+*Problems in prior methods*:
++ Absolute positional encoding is simple, but may not generalize well in longer sequences.
++ Relative positional bias (T5) is not efficient.
+Solution:
++ Apply rotation to word vector to encode rotation.
++ Maintain both absolute and relative positional embeddings in an input sentence.
++ We do not need to train custom parameters.
+
+#### E.4 &nbsp; &nbsp;  Llama 2: Grouped-query Attention (GQA)
+
++ 34B and 70B models used GQA for improved inference scalability.
+
+#### Pre-trained Results
++ After pretraining, results are not as good as other proprietary, closed-source models. (GPT-4 and PaLM-2-L.)
++ Llama-2 is still very competitive (only a pre-trained model)
+
+#### E.4 &nbsp; &nbsp;  Fine-tuning methodology
+
+#### Llama 2: Iterative Fine-Tuning
++ Rejection Sampling: Sample K outputs from the model, select the best candidate based on the reward model
++ Can be combined with PPO
++ Generating multiple samples in this manner can drastically increase the maximum reward of a sample.
+
+#### Llama 2: Ghost Attention (GAtt)
+
+
+#### Llama 2: Fine-Tuning Results
+report the progress of our different SFT and then RLHF versions for both Safety and Helpfulness axes, measured by our in-house Safety and Helpfulness reward models.
+
+
+#### E.5 &nbsp; &nbsp;  Model Safety
+#### Llama 2:  Safety in Fine-Tuning: Adversarial Samples
++ Gather adversarial prompts and safe demonstrations in the SFT training set.
++ Essentially probes for edge cases.
++ Annotator writes both the prompt and the response in adversarial samples.
+
+#### Llama 2:  Safety in RLHF
+RLHF safety measures:
++ Safety RM uses human preference data to train.
++ Reuse the adversarial prompts when training safety RM.
+  
+Helpfulness remains intact after safety tuning with RLHF.
+
+#### Llama 2:  Safety Evaluation
+The fine-tuned versions of LLama 2-Chat, show virtually zero toxicity across all groups.
++ The effectiveness of fine-tuning in mitigating model-generated toxicity.
+
