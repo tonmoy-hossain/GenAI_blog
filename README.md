@@ -49,11 +49,11 @@ Foundation models are expanded into more products, deployments will only scale t
 #### Fair Use Defense
 1. Data creator
 	+ Creates content that might be used for GenAI training.
-	+ Whose copyright may be violated. 
+	+ Whose copyright may be violated? 
 	+ May sue Tech Company who deploys GenAI 
 
 2. Tech Company
-When Tech Companies who deploys GenAI is sued for copyright violation, they can use the Fair Use Defense to not get charged.
+When Tech Companies that deploy GenAI are sued for copyright violation, they can use the Fair Use Defense to not get charged.
 
 
 Four “Arguments” Tech Company Can Use for Defense
@@ -62,6 +62,8 @@ If the use of unlicensed copyrighted materials, then such use is legal:
 2. (Nature of the work) Is factual vs creative
 3. the amount of the portion used is small
 4. has little effect on the market of the copyrighted materials
+
+<img src="./images/fair_use_defense_table.png" width="100%" height="100%">
 
 #### Natural Language Text - Examples of Fair Use Defense
 Examined relevant cases that might help shape what is considered fair use for these models, some of which can be seen in Figure 1.
