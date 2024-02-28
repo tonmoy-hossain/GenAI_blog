@@ -698,19 +698,19 @@ Solution:
 + Maintain both absolute and relative positional embeddings in an input sentence.
 + We do not need to train custom parameters.
 
-<img src="./images/RoPE.png" width="80%" height="80%">
+<img src="./images/RoPE.png" width="70%" height="70%">
 
 #### E.4 &nbsp; &nbsp;  Llama 2: Grouped-query Attention (GQA)
 
 + 34B and 70B models used GQA for improved inference scalability.
 
-<img src="./images/GQA.png" width="100%" height="100%">
+<img src="./images/GQA.png" width="80%" height="80%">
 
 #### Pre-trained Results
 + After pretraining, results are not as good as other proprietary, closed-source models. (GPT-4 and PaLM-2-L.)
 + Llama-2 is still very competitive (only a pre-trained model)
 
-<img src="./images/closed_source_models.png" width="100%" height="100%">
+<img src="./images/closed_source_models.png" width="80%" height="80%">
 
 #### E.4 &nbsp; &nbsp;  Fine-tuning methodology
 
@@ -723,7 +723,7 @@ Solution:
 
 #### Llama 2: Ghost Attention (GAtt)
 
-<img src="./images/GAtt.png" width="80%" height="80%">
+<img src="./images/GAtt.png" width="70%" height="70%">
 
 #### Llama 2: Fine-Tuning Results
 Report the progress of our different SFT and then RLHF versions for both Safety and Helpfulness axes, measured by our in-house Safety and Helpfulness reward models.
