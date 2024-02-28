@@ -617,19 +617,19 @@ Combines transformer-based encoders and decoders together for pre-training, Eg. 
 
 *Diffusion Models*:  The Generative Diffusion Model (GDM) is a cutting-edge class of generative models based on probability, which demonstrates state-of-the-art results in the field of computer vision. It works by progressively corrupting data with multiple-level noise perturbations and then learning to reverse this process for sample generation.
 
-<img src="./images/VLMs.png" width="100%" height="100%">
+<img src="./images/VLMs.png" width="80%" height="80%">
 
 #### D.5 &nbsp; &nbsp;  Multimodal Models
 Under the hood of Encoder-Decoder family architectures. The encoder is responsible for learning a contextualized representation of the input data. Decoder is used to generate raw modalities that reflect cross-modal interactions, structure, and coherence in the representation.
 
-<img src="./images/mult_vlm.png" width="100%" height="100%">
+<img src="./images/mult_vlm.png" width="80%" height="80%">
 
 #### Vision Language Encoders
 + Concatenated encoders: concatenating the embeddings from single encoders 	
 			
 *Cross-aligned encoders*: learning contextualized representations is to look at pairwise interactions between modalities.
 
-<img src="./images/transf_enc.png" width="100%" height="100%">
+<img src="./images/transf_enc.png" width="80%" height="80%">
 
 #### Vision Language Decoders
 1. To text decoders: Jointly- trained decoders, frozen decoders.
@@ -638,7 +638,7 @@ Under the hood of Encoder-Decoder family architectures. The encoder is responsib
 	+ Diffusion-based:GLIDE, Imagen 
 	+ VAE-based: DALL-E
 
-<img src="./images/dall_e2.png" width="100%" height="100%">
+<img src="./images/dall_e2.png" width="80%" height="80%">
 
 #### Other Modalities Generation
 + Text-audio
@@ -666,7 +666,7 @@ Under the hood of Encoder-Decoder family architectures. The encoder is responsib
 
 ## Paper E. Llama 2: Open Foundation and Fine-Tuned Chat Models
 
-<img src="./images/Llamas.png" width="100%" height="100%">
+<img src="./images/Llamas.png" width="80%" height="80%">
 
 #### E.1 &nbsp; &nbsp;  Pre-training methodology
 
