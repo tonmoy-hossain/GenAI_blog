@@ -142,6 +142,8 @@ The third commonly produced category of generative AI is image generation.
 
 While fair use might offer some defense, the direct appropriation of artists' work with only slight alterations poses a significant legal risk for the company, indicating that their use might not qualify as fair use.
 
+<img src="./images/hypothesis_gen_img.png" width="100%" height="100%">
+
 The third commonly produced category of generative AI is image generation.
 
 #### Style Transfer 
@@ -152,12 +154,19 @@ Three components to consider:
 2. The rights of the artist whose style is being mimicked.
 3. Other intellectual property considerations with images: the right to publicity and trademark infringement.
 
+<img src="./images/kera_AI_OpenPromps.png" width="100%" height="100%">
 
 + As seen in Figure 5, we find that the most common named entity type used in prompts are people’s names, including the names of artists like Greg Rutokowski, who is referenced 1.2M times. 
 + This suggests that users in this community often try to generate images in particular artist styles, which is more likely to be fair use as long as the content itself is sufficiently transformative
 
 
 ### A.3 &nbsp; &nbsp; Technical Mitigation
+
+<img src="./images/non_tech_vs_tech_mitigation.png" width="100%" height="100%">
+
+<img src="./images/model_training_and_deployment.png" width="100%" height="100%">
+
+<img src="./images/non_tech_consideration.png" width="100%" height="100%">
 
 #### A.3.1 Data Filtering
 Two Types of Data Filtering 
@@ -196,6 +205,7 @@ It naturally selects the instance before inferencing
 
 #### A.3.4 Differentially Private Training
 
+<img src="./images/diff_private_training.png" width="85%" height="85%">
 
 For example: 
 
@@ -207,6 +217,8 @@ Challenges in Fair Use:
 1. High computation costs
 2. Trade off between privacy and accuracy
 3. Similar examples to the single example removed
+
+<img src="./images/hypothesis_diff_private.png" width="85%" height="85%">
 
 #### A.3.5 Learning from human feedback
 
@@ -251,6 +263,8 @@ whether the copyright laws prohibit using copyrighted data to train machine lear
 
 #### A little bit of Background
 
+<img src="./images/diff_vs_lora.png" width="85%" height="85%">
+
 ### B.2 &nbsp; &nbsp; Plug-ing Market
 
 + Motivated by the copyright law: reward creators for their work
@@ -258,6 +272,7 @@ whether the copyright laws prohibit using copyrighted data to train machine lear
 + Decode generated image into similar example, so that can credit its original creditors
 + Propose a conceptual framework named @Plug-in Market
 
+<img src="./images/plug_in.png" width="100%" height="100%">
 
 + Model owner (OpenAI) acts as a platform 
 + Artist/IP owner: register copyright data as a “Plug-in” 
@@ -269,6 +284,8 @@ Within this structure, all involved parties reap advantages. Copyright holders r
 Furthermore, the market can transparently monitor the usage of copyrighted works, ensuring a fair and straightforward reward system. A thriving market aligns providers with demanders, ultimately benefiting overall societal welfare.
 
 #### Plug-in Market Operations
+
+<img src="./images/plug_in_op.png" width="100%" height="100%">
 
 1. Addition: creator can easily add work as plugin
 2. Extraction: model owner can remove works that are infringed from base model
@@ -291,8 +308,9 @@ Furthermore, the market can transparently monitor the usage of copyrighted works
 	+ Tunes the inversed LoRA to memorize surrounding concepts
 	+ Inverse LoRA to obtain the non-infringing model
 
+<img src="./images/unlearn_memo.png" width="100%" height="100%">
 
-Unlearning: tune LoRA to match copyrighted image with “The painting of the building”
+Unlearning: tune LoRA to match a copyrighted image with “The painting of the building”
 Memorization: guide the generation far away from the target concept “ Picasso” 
 
 *Combination*
@@ -308,11 +326,17 @@ As the addition operation has been well demonstrated by the public, the authors 
 + Style transfer: Extraction and Combination
 + Cartoon IP recreation: Extraction and Combination
 
+<img src="./images/res_style_transfer.png" width="100%" height="100%">
+
 In Table 1, the authors presented objective measures to assess the performance of the extraction operation in comparison to baseline methods. Our method demonstrates a notable improvement, with the KID metric increasing from 42 to 187 on target style compared to Concepts-Ablation (Kumari et al., 2023), which indicates better removal of the target style
 
-Figure 5 shows three IP characters extraction: Mickey, R2D2 and Snoopy. It performs well on all of them, extracting the given IP without disturbing the generation of other IPs. Table 2 quantifies extraction effect in IP recreation. We can increase the KID of the target IP by approximately 2.6 times while keeping the KID of the surrounding IP approximately unchanged.
+<img src="./images/res_extract_IP.png" width="100%" height="100%">
+
+Figure 5 shows three IP characters extraction: Mickey, R2D2, and Snoopy. It performs well on all of them, extracting the given IP without disturbing the generation of other IPs. Table 2 quantifies the extraction effect in IP recreation. We can increase the KID of the target IP by approximately 2.6 times while keeping the KID of the surrounding IP approximately unchanged.
 
 In Figure 6, the authors illustrated combination and addition of various IP in a single image, as exemplified in Figure 6. Subsequent to the combination step, the non-infringing model’s capability to generate either Mickey Mouse or Darth Vader-themed images is removed.
+
+<img src="./images/res_style_transfer_2.png" width="100%" height="100%">
 
 ##### Limitations
 1. Search
@@ -336,6 +360,8 @@ The framework faces a challenge in efficiently handling numerous plug-ins, makin
 1. Whether do generative models memorize and regenerate training example
 	+ Yes, state-of-the-art diffusion models do memorize training samples!
 
+<img src="./images/diff_model_memo.png" width="100%" height="100%">
+
 2. How and why do memorization occur?
 	+ Understanding privacy risks
 	+ Understanding generalization
@@ -351,6 +377,7 @@ The framework faces a challenge in efficiently handling numerous plug-ins, makin
 
 This paper explores 3 attacks on diffusion models.
 
+<img src="./images/diff_model.png" width="100%" height="100%">
 
 ### C.3 &nbsp; &nbsp; Threat Model System Overview
 
@@ -364,6 +391,7 @@ This paper explores 3 attacks on diffusion models.
 
 *Data Extraction Attack*: Extracting training data from state-of-the-art diffusion model: Stable Diffusion and Imagen
 
+<img src="./images/extract_abd_memo.png" width="100%" height="100%">
 
 #### Data Extraction from Stable Diffusion (Black-box attacks)
 1. Preprocessing: Identifying duplicates in the training data to reduce computational cost
@@ -374,6 +402,10 @@ This paper explores 3 attacks on diffusion models.
 	+ Generating images using selected prompts
 	+ 500 images for each prompt with different seeds
 	+ Performing membership inference to get images that appear to be memorized
+
+<img src="./images/res_stable_diff.png" width="100%" height="100%">
+
+<img src="./images/attack_reliability_stab_diff.png" width="100%" height="100%">
 
 #### Extraction Result for Stable Diffusion
 1. Compare with training images using definition 1, 94 images are successfully extracted under the threshold 0.15 for l2 distance
@@ -391,24 +423,33 @@ For 175 million generated images, they will sort them by the mean distance betwe
 	+ Membership inference attacks (class-conditional models)
 	+ Data reconstruction attacks (inpainting models)
 
+<img src="./images/l2_freq.png" width="100%" height="100%">
+
 Figure 7 illustrates this by computing the `2 distance between two different generated images and every image in the CIFAR-10 training dataset. The left figure shows a failed extraction attempt; despite the fact that the nearest training image has an `2 distance of just 0.06, this distance is on par with the distance to many other training images (i.e., all images that contain a blue sky). In contrast, the right plot shows a successful extraction attack.
 
 
 #### Membership Inference Attack
 
+<img src="./images/mia.png" width="100%" height="100%">
+
+<img src="./images/mia_roc_fid.png" width="100%" height="100%">
+
 Figure 10 shows the effect of combining both these strategies. Together they are remarkably successful, and at a false positive rate of 0.1% they increase the true positive rate by over a factor of six from 7% to 44%. In Figure 11 the authors computed the attack success rate as a function of FID, and we find that as the quality of the diffusion model increases so too does the privacy leakage. These results are concerning because they suggest that stronger diffusion models of the future may be even less private. 
 
 #### Qualitative Results
 
-
+<img src="./images/res_hard_to_attack.png" width="100%" height="100%">
 
 #### Inpainting Attacks
 
 + Recover masked region of a image
 + Take top-10 scoring reconstruction results for each image
 
+<img src="./images/inpainting_attack.png" width="100%" height="100%">
+
 The above figure shows qualitative examples of this attack. The highest-scoring reconstruction looks visually similar to the target image when the target is in training and does not resemble the target when it is not in training
 
+<img src="./images/res_inpaint_attack.png" width="100%" height="100%">
 
 Figure 12 compares the average distance between the sample and the ten highest scoring inpainted samples. This allows us to show our inpainting attacks have succeed: the reconstruction loss is substantially better in terms of `2 distance when the image is in the training set than when not. 
 
@@ -419,7 +460,11 @@ Unlike diffusion models that are explicitly trained to memorize and reconstruct 
 
 #### Data Extraction Attacks
 
+<img src="./images/Diff_GAN.png" width="100%" height="100%">
+
 Table 1 shows the number of extracted images for each model and their corresponding FID. Overall, the authors find that diffusion models memorize more data than GANs, even when the GANs reach similar performance, e.g., the best DDPM model memorizes 2× more than StyleGAN-ADA but reaches the same FID.
+
+<img src="./images/GAN_FIDs.png" width="100%" height="100%">
 
 Using the GANs we trained ourselves, the authors showed examples of the near-copy generations in Figure 15 for the three GANs. Overall, the results further reinforce the conclusion that diffusion models are less private than GAN models
 
@@ -448,6 +493,8 @@ The goal of AIGC is to make the content creation process more efficient and acce
 
 This survey provides a comprehensive review of the history of generative models, and basic components, and recent advances in AIGC from unimodal interaction and multimodal interaction.
 
+<img src="./images/uni_vs_mult.png" width="100%" height="100%">
+
 Figure 2 offers a thorough summary of advanced GAI algorithms, both in terms of unimodal generation and multimodal generation.
 
 Three primary contributions are as follows – 
@@ -458,10 +505,16 @@ Three primary contributions are as follows –
 #### Emergence from the technical approach
 The transformer architecture, introduced in 2017, has revolutionized AI by becoming the backbone of major generative models in NLP and CV. Innovations like the Vision Transformer and SwinTransformer have furthered this by adding visual components. 
 
+<img src="./images/uni_cv_nlp.png" width="100%" height="100%">
+
 #### D.1 &nbsp; &nbsp;  Foundation pre-trained model
 The use of pre-trained language models has emerged as the prevailing technique in the domain of NLP. Generally, current state-of-the-art pre-trained language models could be categorized as masked language models (encoders), autoregressive language models (decoders) and encoder-decoder language models, as shown in Figure 4.
 
+<img src="./images/fm_pre_trained.png" width="100%" height="100%">
+
 Reinforcement Learning from Human Feedback: To better align AIGC output with human preferences. Three distinct categories, including, pre-training, reward learning, and fine-tuning with reinforcement learning.
+
+<img src="./images/instructgpt_rlhf.png" width="100%" height="100%">
 
 #### D.2 &nbsp; &nbsp;  Computing and Hardware
 
@@ -471,6 +524,7 @@ The training workload is split among multiple processors or machines, allowing t
 ##### Cloud Computing
 Service providers let researchers access to powerful computing resources to boost their model training. eg. AWS (Amazon) & Azure (Microsoft) 
 
+<img src="./images/compute_hardware.png" width="100%" height="100%">
 
 #### D.3 &nbsp; &nbsp;  Generative AI
 
@@ -520,13 +574,19 @@ Combines transformer-based encoders and decoders together for pre-training, Eg. 
 
 *Diffusion Models*:  The Generative Diffusion Model (GDM) is a cutting-edge class of generative models based on probability, which demonstrates state-of-the-art results in the field of computer vision. It works by progressively corrupting data with multiple-level noise perturbations and then learning to reverse this process for sample generation.
 
+<img src="./images/VLMs.png" width="100%" height="100%">
+
 #### D.5 &nbsp; &nbsp;  Multimodal Models
 Under the hood of Encoder-Decoder family architectures. The encoder is responsible for learning a contextualized representation of the input data. Decoder is used to generate raw modalities that reflect cross-modal interactions, structure, and coherence in the representation.
+
+<img src="./images/mult_vlm.png" width="100%" height="100%">
 
 #### Vision Language Encoders
 + Concatenated encoders: concatenating the embeddings from single encoders 	
 			
-*Cross-aligned encoders*: learn contextualized representations is to look at pairwise interactions between modalities.
+*Cross-aligned encoders*: learning contextualized representations is to look at pairwise interactions between modalities.
+
+<img src="./images/transf_enc.png" width="100%" height="100%">
 
 #### Vision Language Decoders
 1. To text decoders: Jointly- trained decoders, frozen decoders.
@@ -535,13 +595,18 @@ Under the hood of Encoder-Decoder family architectures. The encoder is responsib
 	+ Diffusion-based:GLIDE, Imagen 
 	+ VAE-based: DALL-E
 
+<img src="./images/dall_e2.png" width="100%" height="100%">
+
 #### Other Modalities Generation
 + Text-audio
 + Text-graph
 + Text-code
 
+<img src="./images/dallenc_momu.png" width="100%" height="100%">
+
 #### D.6 &nbsp; &nbsp;  Applications
 
+<img src="./images/app_mult.png" width="100%" height="100%">
 
 #### D.7 &nbsp; &nbsp;  Efficiency
 1. Inference efficiency: This is concerned with the practical considerations of deploying a model for inference, i.e., computing the model’s outputs for a given input. Inference efficiency is mostly related to the model’s size, speed, and resource consumption (e.g., disk and RAM usage) during inference.
@@ -558,11 +623,15 @@ Under the hood of Encoder-Decoder family architectures. The encoder is responsib
 
 ## Paper E. Llama 2: Open Foundation and Fine-Tuned Chat Models
 
+<img src="./images/Llamas.png" width="100%" height="100%">
+
 #### E.1 &nbsp; &nbsp;  Pre-training methodology
 
 To create the new family of Llama 2 models, the authors used an optimized auto-regressive transformer but made several changes to improve performance.
 
 Specifically, they performed more robust data cleaning, updated data mixes, trained on 40% more total tokens, doubled the context length, and used grouped-query attention (GQA) to improve inference scalability for larger models.
+
+<img src="./images/mult_vlm.png" width="100%" height="100%">
 
 #### E.2 &nbsp; &nbsp;  Training Details
 1. Adopt most of the pretraining setting and model architecture from Llama 1:
@@ -586,13 +655,19 @@ Solution:
 + Maintain both absolute and relative positional embeddings in an input sentence.
 + We do not need to train custom parameters.
 
+<img src="./images/RoPE.png" width="100%" height="100%">
+
 #### E.4 &nbsp; &nbsp;  Llama 2: Grouped-query Attention (GQA)
 
 + 34B and 70B models used GQA for improved inference scalability.
 
+<img src="./images/GQA.png" width="100%" height="100%">
+
 #### Pre-trained Results
 + After pretraining, results are not as good as other proprietary, closed-source models. (GPT-4 and PaLM-2-L.)
 + Llama-2 is still very competitive (only a pre-trained model)
+
+<img src="./images/closed_source_models.png" width="100%" height="100%">
 
 #### E.4 &nbsp; &nbsp;  Fine-tuning methodology
 
@@ -601,18 +676,25 @@ Solution:
 + Can be combined with PPO
 + Generating multiple samples in this manner can drastically increase the maximum reward of a sample.
 
+<img src="./images/iterative_fine_tune.png" width="100%" height="100%">
+
 #### Llama 2: Ghost Attention (GAtt)
 
+<img src="./images/GAtt.png" width="100%" height="100%">
 
 #### Llama 2: Fine-Tuning Results
-report the progress of our different SFT and then RLHF versions for both Safety and Helpfulness axes, measured by our in-house Safety and Helpfulness reward models.
+Report the progress of our different SFT and then RLHF versions for both Safety and Helpfulness axes, measured by our in-house Safety and Helpfulness reward models.
 
+<img src="./images/Llama2_chat.png" width="100%" height="100%">
+<img src="./images/human_eval.png" width="100%" height="100%">
 
 #### E.5 &nbsp; &nbsp;  Model Safety
 #### Llama 2:  Safety in Fine-Tuning: Adversarial Samples
 + Gather adversarial prompts and safe demonstrations in the SFT training set.
 + Essentially probes for edge cases.
 + Annotator writes both the prompt and the response in adversarial samples.
+
+<img src="./images/prompt_safety.png" width="100%" height="100%">
 
 #### Llama 2:  Safety in RLHF
 RLHF safety measures:
@@ -621,7 +703,10 @@ RLHF safety measures:
   
 Helpfulness remains intact after safety tuning with RLHF.
 
+<img src="./images/safety_scale.png" width="100%" height="100%">
+
 #### Llama 2:  Safety Evaluation
 The fine-tuned versions of LLama 2-Chat, show virtually zero toxicity across all groups.
 + The effectiveness of fine-tuning in mitigating model-generated toxicity.
 
+<img src="./images/safety_eval.png" width="100%" height="100%">
