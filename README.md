@@ -377,7 +377,7 @@ The framework faces a challenge in efficiently handling numerous plug-ins, makin
 
 This paper explores 3 attacks on diffusion models.
 
-<img src="./images/diff_model.png" width="100%" height="100%">
+<img src="./images/diff_model.jpg" width="100%" height="100%">
 
 ### C.3 &nbsp; &nbsp; Threat Model System Overview
 
@@ -391,7 +391,7 @@ This paper explores 3 attacks on diffusion models.
 
 *Data Extraction Attack*: Extracting training data from state-of-the-art diffusion model: Stable Diffusion and Imagen
 
-<img src="./images/extract_abd_memo.png" width="100%" height="100%">
+<img src="./images/extract_and_memo.png" width="100%" height="100%">
 
 #### Data Extraction from Stable Diffusion (Black-box attacks)
 1. Preprocessing: Identifying duplicates in the training data to reduce computational cost
