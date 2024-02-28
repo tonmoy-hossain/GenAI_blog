@@ -746,10 +746,10 @@ RLHF safety measures:
   
 Helpfulness remains intact after safety tuning with RLHF.
 
-<img src="./images/safety_scale.png" width="100%" height="100%">
+<img src="./images/safety_scale.png" width="80%" height="80%">
 
 #### Llama 2:  Safety Evaluation
 The fine-tuned versions of LLama 2-Chat, show virtually zero toxicity across all groups.
 + The effectiveness of fine-tuning in mitigating model-generated toxicity.
 
-<img src="./images/safety_eval.png" width="100%" height="100%">
+<img src="./images/safety_eval.png" width="80%" height="80%">
