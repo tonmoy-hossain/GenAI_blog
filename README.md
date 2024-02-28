@@ -753,3 +753,11 @@ The fine-tuned versions of LLama 2-Chat, show virtually zero toxicity across all
 + The effectiveness of fine-tuning in mitigating model-generated toxicity.
 
 <img src="./images/safety_eval.png" width="80%" height="80%">
+
+
+## References
+ + https://arxiv.org/abs/2303.15715
+ + https://arxiv.org/abs/2301.13188
+ + https://arxiv.org/abs/2303.04226
+ + https://openreview.net/forum?id=pSf8rrn49H
+ + https://arxiv.org/abs/2305.18462
