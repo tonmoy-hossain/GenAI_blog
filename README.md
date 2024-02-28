@@ -360,7 +360,7 @@ The framework faces a challenge in efficiently handling numerous plug-ins, makin
 1. Whether do generative models memorize and regenerate training example
 	+ Yes, state-of-the-art diffusion models do memorize training samples!
 
-<img src="./images/diff_model_memo.png" width="75%" height="75%">
+<img src="./images/diff_model_memo.png" width="60%" height="60%">
 
 2. How and why do memorization occur?
 	+ Understanding privacy risks
@@ -423,14 +423,14 @@ For 175 million generated images, they will sort them by the mean distance betwe
 	+ Membership inference attacks (class-conditional models)
 	+ Data reconstruction attacks (inpainting models)
 
-<img src="./images/l2_freq.png" width="80%" height="80%">
+<img src="./images/l2_freq.png" width="60%" height="60%">
 
 Figure 7 illustrates this by computing the `2 distance between two different generated images and every image in the CIFAR-10 training dataset. The left figure shows a failed extraction attempt; despite the fact that the nearest training image has a `2 distance of just 0.06, this distance is on par with the distance to many other training images (i.e., all images that contain a blue sky). In contrast, the right plot shows a successful extraction attack.
 
 
 #### Membership Inference Attack
 
-<img src="./images/mia.png" width="100%" height="100%">
+<img src="./images/mia.png" width="75%" height="75%">
 
 <img src="./images/mia_roc_fid.png" width="100%" height="100%">
 
@@ -445,11 +445,11 @@ Figure 10 shows the effect of combining both these strategies. Together they are
 + Recover masked region of a image
 + Take top-10 scoring reconstruction results for each image
 
-<img src="./images/inpainting_attack.png" width="100%" height="100%">
+<img src="./images/inpainting_attack.png" width="75%" height="75%">
 
 The above figure shows qualitative examples of this attack. The highest-scoring reconstruction looks visually similar to the target image when the target is in training and does not resemble the target when it is not in training
 
-<img src="./images/res_inpaint_attack.png" width="100%" height="100%">
+<img src="./images/res_inpaint_attack.png" width="60%" height="60%">
 
 Figure 12 compares the average distance between the sample and the ten highest scoring inpainted samples. This allows us to show our inpainting attacks have succeed: the reconstruction loss is substantially better in terms of `2 distance when the image is in the training set than when not. 
 
@@ -460,7 +460,7 @@ Unlike diffusion models that are explicitly trained to memorize and reconstruct 
 
 #### Data Extraction Attacks
 
-<img src="./images/Diff_GAN.png" width="100%" height="100%">
+<img src="./images/Diff_GAN.png" width="70%" height="70%">
 
 Table 1 shows the number of extracted images for each model and their corresponding FID. Overall, the authors find that diffusion models memorize more data than GANs, even when the GANs reach similar performance, e.g., the best DDPM model memorizes 2× more than StyleGAN-ADA but reaches the same FID.
 
@@ -676,11 +676,11 @@ Solution:
 + Can be combined with PPO
 + Generating multiple samples in this manner can drastically increase the maximum reward of a sample.
 
-<img src="./images/iterative_fine_tune.png" width="100%" height="100%">
+<img src="./images/iterative_fine_tune.png" width="60%" height="60%">
 
 #### Llama 2: Ghost Attention (GAtt)
 
-<img src="./images/GAtt.png" width="100%" height="100%">
+<img src="./images/GAtt.png" width="80%" height="80%">
 
 #### Llama 2: Fine-Tuning Results
 Report the progress of our different SFT and then RLHF versions for both Safety and Helpfulness axes, measured by our in-house Safety and Helpfulness reward models.
