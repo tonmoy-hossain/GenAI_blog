@@ -728,8 +728,8 @@ Solution:
 #### Llama 2: Fine-Tuning Results
 Report the progress of our different SFT and then RLHF versions for both Safety and Helpfulness axes, measured by our in-house Safety and Helpfulness reward models.
 
-<img src="./images/Llama2_chat.png" width="100%" height="100%">
-<img src="./images/human_eval_res.png" width="100%" height="100%">
+<img src="./images/Llama2_chat.png" width="80%" height="80%">
+<img src="./images/human_eval_res.png" width="80%" height="80%">
 
 #### E.5 &nbsp; &nbsp;  Model Safety
 #### Llama 2:  Safety in Fine-Tuning: Adversarial Samples
@@ -737,7 +737,7 @@ Report the progress of our different SFT and then RLHF versions for both Safety 
 + Essentially probes for edge cases.
 + Annotator writes both the prompt and the response in adversarial samples.
 
-<img src="./images/prompt_safety.png" width="100%" height="100%">
+<img src="./images/prompt_safety.png" width="80%" height="80%">
 
 #### Llama 2:  Safety in RLHF
 RLHF safety measures:
