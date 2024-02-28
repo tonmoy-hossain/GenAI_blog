@@ -719,7 +719,7 @@ Solution:
 + Can be combined with PPO
 + Generating multiple samples in this manner can drastically increase the maximum reward of a sample.
 
-<img src="./images/iterative_fine_tune.png" width="60%" height="60%">
+<img src="./images/iterative_fine_tune.png" width="50%" height="50%">
 
 #### Llama 2: Ghost Attention (GAtt)
 
