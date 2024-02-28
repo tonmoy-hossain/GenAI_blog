@@ -44,7 +44,7 @@ Foundation models are machine learning models trained on broad data (typically s
 
 Foundation models are expanded into more products, deployments will only scale to more and more users.
 
-<img src="./images/fair_use_table.png" width="100%" height="100%">
+<img src="./images/fair_use_table.png" width="85%" height="85%">
 
 #### Fair Use Defense
 1. Data creator
@@ -68,6 +68,8 @@ If the use of unlicensed copyrighted materials, then such use is legal:
 #### Natural Language Text - Examples of Fair Use Defense
 Examined relevant cases that might help shape what is considered fair use for these models, some of which can be seen in Figure 1.
 
+<img src="./images/claims_of_fair_use.png" width="100%" height="100%">
+
 + how a generative foundation model trained on books might be used to produce different types of outputs and what cases might illustrate similar situations. 
 + these cases help us outline the level of the transformation necessary to stay within the current confines of fair use doctrine
 
@@ -84,6 +86,8 @@ Fair Use Considerations:
 Verbatim Copying and Hypotheticals:
 1. Google Books case: Limited content provision as fair use.
 2. Hypothetical scenario: Virtual assistant reading books aloud.
+
+<img src="./images/similarity_ratio.png" width="100%" height="100%">
 
 + Under such a low-temperature regime, many models generate repetitive low-quality content and extraction rates are low, generally only generating small amounts of verbatim text, as seen in Figure 2. 
 + Nonetheless, certain types of content yield greater extraction even with little manual prompt engineering
@@ -126,6 +130,8 @@ Natural language text and code generation models have similar training processes
 *Additional Concerns in Code Generation*:
 1. Potential right of publicity issues with verbatim output of usernames.
 2. DMCA §1202 and right of publicity considerations for transformative works.
+
+<img src="./images/codex_models_results.png" width="100%" height="100%">
 
 Figure 4 shows that models can generate function implementations that substantially overlap with reference implementations
 
