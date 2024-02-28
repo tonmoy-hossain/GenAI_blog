@@ -142,7 +142,7 @@ The third commonly produced category of generative AI is image generation.
 
 While fair use might offer some defense, the direct appropriation of artists' work with only slight alterations poses a significant legal risk for the company, indicating that their use might not qualify as fair use.
 
-<img src="./images/hypothesis_gen_img.png" width="100%" height="100%">
+<img src="./images/hypothesis_gen_img.png" width="80%" height="80%">
 
 The third commonly produced category of generative AI is image generation.
 
@@ -162,11 +162,11 @@ Three components to consider:
 
 ### A.3 &nbsp; &nbsp; Technical Mitigation
 
-<img src="./images/non_tech_vs_tech_mitigation.png" width="100%" height="100%">
+<img src="./images/non_tech_vs_tech_mitigation.png" width="80%" height="80%">
 
-<img src="./images/model_training_and_deployment.png" width="100%" height="100%">
+<img src="./images/model_training_and_deployment.png" width="90%" height="90%">
 
-<img src="./images/non_tech_consideration.png" width="100%" height="100%">
+<img src="./images/non_tech_consideration.png" width="90%" height="90%">
 
 #### A.3.1 Data Filtering
 Two Types of Data Filtering 
@@ -205,7 +205,7 @@ It naturally selects the instance before inferencing
 
 #### A.3.4 Differentially Private Training
 
-<img src="./images/diff_private_training.png" width="85%" height="85%">
+<img src="./images/diff_private_training.png" width="75%" height="75%">
 
 For example: 
 
@@ -263,7 +263,7 @@ whether the copyright laws prohibit using copyrighted data to train machine lear
 
 #### A little bit of Background
 
-<img src="./images/diff_vs_lora.png" width="85%" height="85%">
+<img src="./images/diff_vs_lora.png" width="75%" height="75%">
 
 ### B.2 &nbsp; &nbsp; Plug-ing Market
 
@@ -326,11 +326,11 @@ As the addition operation has been well demonstrated by the public, the authors 
 + Style transfer: Extraction and Combination
 + Cartoon IP recreation: Extraction and Combination
 
-<img src="./images/res_style_transfer.png" width="100%" height="100%">
+<img src="./images/res_style_transfer.png" width="80%" height="80%">
 
 In Table 1, the authors presented objective measures to assess the performance of the extraction operation in comparison to baseline methods. Our method demonstrates a notable improvement, with the KID metric increasing from 42 to 187 on target style compared to Concepts-Ablation (Kumari et al., 2023), which indicates better removal of the target style
 
-<img src="./images/res_extract_IP.png" width="100%" height="100%">
+<img src="./images/res_extract_IP.png" width="90%" height="90%">
 
 Figure 5 shows three IP characters extraction: Mickey, R2D2, and Snoopy. It performs well on all of them, extracting the given IP without disturbing the generation of other IPs. Table 2 quantifies the extraction effect in IP recreation. We can increase the KID of the target IP by approximately 2.6 times while keeping the KID of the surrounding IP approximately unchanged.
 
@@ -360,7 +360,7 @@ The framework faces a challenge in efficiently handling numerous plug-ins, makin
 1. Whether do generative models memorize and regenerate training example
 	+ Yes, state-of-the-art diffusion models do memorize training samples!
 
-<img src="./images/diff_model_memo.png" width="100%" height="100%">
+<img src="./images/diff_model_memo.png" width="75%" height="75%">
 
 2. How and why do memorization occur?
 	+ Understanding privacy risks
@@ -391,7 +391,7 @@ This paper explores 3 attacks on diffusion models.
 
 *Data Extraction Attack*: Extracting training data from state-of-the-art diffusion model: Stable Diffusion and Imagen
 
-<img src="./images/extract_and_memo.png" width="100%" height="100%">
+<img src="./images/extract_and_memo.png" width="75%" height="75%">
 
 #### Data Extraction from Stable Diffusion (Black-box attacks)
 1. Preprocessing: Identifying duplicates in the training data to reduce computational cost
@@ -423,9 +423,9 @@ For 175 million generated images, they will sort them by the mean distance betwe
 	+ Membership inference attacks (class-conditional models)
 	+ Data reconstruction attacks (inpainting models)
 
-<img src="./images/l2_freq.png" width="100%" height="100%">
+<img src="./images/l2_freq.png" width="80%" height="80%">
 
-Figure 7 illustrates this by computing the `2 distance between two different generated images and every image in the CIFAR-10 training dataset. The left figure shows a failed extraction attempt; despite the fact that the nearest training image has an `2 distance of just 0.06, this distance is on par with the distance to many other training images (i.e., all images that contain a blue sky). In contrast, the right plot shows a successful extraction attack.
+Figure 7 illustrates this by computing the `2 distance between two different generated images and every image in the CIFAR-10 training dataset. The left figure shows a failed extraction attempt; despite the fact that the nearest training image has a `2 distance of just 0.06, this distance is on par with the distance to many other training images (i.e., all images that contain a blue sky). In contrast, the right plot shows a successful extraction attack.
 
 
 #### Membership Inference Attack
