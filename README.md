@@ -308,7 +308,7 @@ Furthermore, the market can transparently monitor the usage of copyrighted works
 	+ Tunes the inversed LoRA to memorize surrounding concepts
 	+ Inverse LoRA to obtain the non-infringing model
 
-<img src="./images/unlearn_memo.png" width="100%" height="100%">
+<img src="./images/unlearn_memo.png" width="80%" height="80%">
 
 Unlearning: tune LoRA to match a copyrighted image with “The painting of the building”
 Memorization: guide the generation far away from the target concept “ Picasso” 
@@ -330,20 +330,20 @@ As the addition operation has been well demonstrated by the public, the authors 
 
 In Table 1, the authors presented objective measures to assess the performance of the extraction operation in comparison to baseline methods. Our method demonstrates a notable improvement, with the KID metric increasing from 42 to 187 on target style compared to Concepts-Ablation (Kumari et al., 2023), which indicates better removal of the target style
 
-<img src="./images/res_extract_IP.png" width="90%" height="90%">
+<img src="./images/res_extract_IP.png" width="80%" height="80%">
 
 Figure 5 shows three IP characters extraction: Mickey, R2D2, and Snoopy. It performs well on all of them, extracting the given IP without disturbing the generation of other IPs. Table 2 quantifies the extraction effect in IP recreation. We can increase the KID of the target IP by approximately 2.6 times while keeping the KID of the surrounding IP approximately unchanged.
 
-In Figure 6, the authors illustrated combination and addition of various IP in a single image, as exemplified in Figure 6. Subsequent to the combination step, the non-infringing model’s capability to generate either Mickey Mouse or Darth Vader-themed images is removed.
+In Figure 6, the authors illustrated the combination and addition of various IPs in a single image, as exemplified in Figure 6. Subsequent to the combination step, the non-infringing model’s capability to generate either Mickey Mouse or Darth Vader-themed images is removed.
 
-<img src="./images/res_style_transfer_2.png" width="100%" height="100%">
+<img src="./images/res_style_transfer_2.png" width="80%" height="80%">
 
-##### Limitations
+#### Limitations
 1. Search
 	+ How to manage plug-ins with its growth?
 	+ How user can find the right plug-in effectively? 
 2. Backward compatibility
-	+ When the base model is upgraded, the pool of plug-ins need to be retrained, which adds huge cost.
+	+ When the base model is upgraded, the pool of plug-ins needs to be retrained, which adds huge cost.
 3. Performance
 	+ Non-infringing model may degrade if conducting too many extraction operations, and the influence is not thoroughly evaluated.
 
@@ -423,7 +423,7 @@ For 175 million generated images, they will sort them by the mean distance betwe
 	+ Membership inference attacks (class-conditional models)
 	+ Data reconstruction attacks (inpainting models)
 
-<img src="./images/l2_freq.png" width="60%" height="60%">
+<img src="./images/l2_freq.png" width="50%" height="50%">
 
 Figure 7 illustrates this by computing the `2 distance between two different generated images and every image in the CIFAR-10 training dataset. The left figure shows a failed extraction attempt; despite the fact that the nearest training image has a `2 distance of just 0.06, this distance is on par with the distance to many other training images (i.e., all images that contain a blue sky). In contrast, the right plot shows a successful extraction attack.
 
@@ -442,14 +442,14 @@ Figure 10 shows the effect of combining both these strategies. Together they are
 
 #### Inpainting Attacks
 
-+ Recover masked region of a image
++ Recover masked region of an image
 + Take top-10 scoring reconstruction results for each image
 
-<img src="./images/inpainting_attack.png" width="75%" height="75%">
+<img src="./images/inpainting_attack.png" width="60%" height="60%">
 
 The above figure shows qualitative examples of this attack. The highest-scoring reconstruction looks visually similar to the target image when the target is in training and does not resemble the target when it is not in training
 
-<img src="./images/res_inpaint_attack.png" width="60%" height="60%">
+<img src="./images/res_inpaint_attack.png" width="50%" height="50%">
 
 Figure 12 compares the average distance between the sample and the ten highest scoring inpainted samples. This allows us to show our inpainting attacks have succeed: the reconstruction loss is substantially better in terms of `2 distance when the image is in the training set than when not. 
 
@@ -655,7 +655,7 @@ Solution:
 + Maintain both absolute and relative positional embeddings in an input sentence.
 + We do not need to train custom parameters.
 
-<img src="./images/RoPE.png" width="100%" height="100%">
+<img src="./images/RoPE.png" width="80%" height="80%">
 
 #### E.4 &nbsp; &nbsp;  Llama 2: Grouped-query Attention (GQA)
 
